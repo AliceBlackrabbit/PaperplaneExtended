@@ -129,7 +129,7 @@ async def set_afk(afk_e):
         string = str(message[5:])
         global ISAFK
         global AFKREASON
-        await afk_e.edit("Going AFK !!")
+        await afk_e.edit("気分が悪くなる !!")
         if string != "":
             AFKREASON = string
         if BOTLOG:
@@ -148,7 +148,7 @@ async def type_afk_is_not_true(notafk):
     global AFKREASON
     if ISAFK:
         ISAFK = False
-        await notafk.respond("I'm no longer AFK.")
+        await notafk.respond("私はもうAFKではありません.")
         sleep(2)
         if BOTLOG:
             await notafk.client.send_message(
